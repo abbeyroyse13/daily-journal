@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,64 @@
     <title>Abbey's Journal</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
 
     <header>
-        <h2>Abbey's Daily Journal</h2>
+        <nav class="navbar">
+            <img src="" alt="logo">
+            <h2>Abbey's Daily Journal</h2>
+            <a href="index.html">See All Entries</a>
+        </nav>
     </header>
 
     <form action="">
+
         <fieldset>
+            <label for="myName">Abbey Royse</label>
+        </fieldset>
+
+        <fieldset>
+
             <label for="journalDate">Entry Date</label>
             <input type="date" name="journalDate" id="journalDate">
+
         </fieldset>
+
+        <fieldset>
+            <label for="mood-select">Choose a mood:</label>
+            <select id="mood-select" name="moods">
+                <option value="">How are you feeling?</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="angry">Angry</option>
+                <option value="in-love">In Love</option>
+                <option value="scared">Scared</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label for="concepts-covered">Concepts Covered</label>
+            <input type="" name="concepts-covered" id="concepts-covered">
+        </fieldset>
+
+        <fieldset>
+            <label for="journal-entry">Journal Entry</label>
+            <input type="" name="journal-entry" id="journal-entry">
+        </fieldset>
+
+        <div class="button">
+            <button>Record Journal Entry</button>
+        </div>
+
     </form>
 
     <main>
         <p></p>
     </main>
-    
-    <footer></footer>
-    
+
+    <footer>&copy; Abbey Royse 2021 https://github.com/abbeyroyse13</footer>
+
 </body>
+
 </html>
