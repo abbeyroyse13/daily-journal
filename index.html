@@ -21,42 +21,40 @@
 
     <form action="">
 
-        <fieldset>
-            <label for="myName">Abbey Royse</label>
-        </fieldset>
+        <section>
+            <fieldset>
+                <label for="myName">Abbey Royse</label>
+            </fieldset>
 
-        <fieldset>
+            <fieldset>
 
-            <label for="journalDate">Entry Date</label>
-            <input type="date" name="journalDate" id="journalDate">
+                <label for="journalDate">Entry Date</label>
+                <input type="date" name="journalDate" id="journalDate">
 
-        </fieldset>
+            </fieldset>
 
-        <fieldset>
-            <label for="mood-select">Choose a mood:</label>
-            <select id="mood-select" name="moods">
-                <option value="">How are you feeling?</option>
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="angry">Angry</option>
-                <option value="in-love">In Love</option>
-                <option value="scared">Scared</option>
-            </select>
-        </fieldset>
+            <fieldset>
+                <label for="mood-select">Choose a mood:</label>
+                <select id="mood-select" name="moods">
+                    <option value="">How are you feeling?</option>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="angry">Angry</option>
+                    <option value="in-love">In Love</option>
+                    <option value="scared">Scared</option>
+                </select>
+            </fieldset>
 
-        <fieldset>
+            <div class="button">
+                <button>Record Journal Entry</button>
+            </div>
+        </section>
+
             <label for="concepts-covered">Concepts Covered</label>
-            <input type="" name="concepts-covered" id="concepts-covered">
-        </fieldset>
+            <textarea id="concepts" name="concepts-covered" class="concepttext"></textarea>
 
-        <fieldset>
             <label for="journal-entry">Journal Entry</label>
-            <input type="" name="journal-entry" id="journal-entry">
-        </fieldset>
-
-        <div class="button">
-            <button>Record Journal Entry</button>
-        </div>
+            <textarea id="entries" name="journal-entry" rows="4" cols="50" class="journaltext"></textarea>
 
     </form>
 
