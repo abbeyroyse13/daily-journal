@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    justify-content: left;
+}
