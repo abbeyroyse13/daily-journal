@@ -20,7 +20,7 @@ footer {
     margin-top: 50%;
 }
 
-section {
+.main-items {
     display: flex;
     flex-direction: row;
     margin-left: 3%;
@@ -46,4 +46,13 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+#JournalEntryList {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+}
+
+.textBox {
+    text-align: left;
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abbey's Journal</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,13 +16,15 @@
         <nav class="navbar">
             <img src="" alt="logo">
             <h2>Abbey's Daily Journal</h2>
-            <a href="index.html">See Entries Page</a>
+            <a href="index.html">Entries</a>
         </nav>
     </header>
 
+<article class="JournalEntryList"></article>
+
     <form action="">
 
-        <section>
+        <section class="main-items">
             <fieldset>
                 <label for="myName">Abbey Royse</label>
             </fieldset>
@@ -52,23 +55,38 @@
             <div class="button">
                 <button>Record Journal Entry</button>
             </div>
+
         </section>
 
+        <fieldset class="textBox">
             <label for="concepts-covered">Concepts Covered</label>
             <textarea id="concepts" name="concepts-covered" rows="5" cols="50" class="concepttext"></textarea>
 
             <label for="journal-entry">Journal Entry</label>
             <textarea id="entries" name="journal-entry" rows="20" cols="100" class="journaltext"></textarea>
+        </fieldset>
+
+        <div class="button2">
+            <button>Edit</button>
+        </div>
+
+        <div class="button3">
+            <button>Delete</button>
+        </div>
 
     </form>
+
+    <section id="JournalEntryList"></section>
 
     <main>
         <p></p>
     </main>
 
-    <footer>&copy; Abbey Royse 2021 https://github.com/abbeyroyse13</footer>
+    <footer>&copy; Abbey Royse 2021
+        <a href="https://github.com/abbeyroyse13">GitHub</a>
+    </footer>
 
-    <script type="module" src="./scripts/main.js>
+    <script type="module" src="./scripts/main.js"></script>
 
 </body>
 
