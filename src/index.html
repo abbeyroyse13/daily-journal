@@ -14,72 +14,74 @@
 
     <header>
         <nav class="navbar">
-            <img src="" alt="logo">
-            <h2>Abbey's Daily Journal</h2>
-            <a href="index.html">Entries</a>
+                <img src="" alt="logo">
+                <h2 class="title">Abbey's Daily Journal</h2>
+                <a href="index.html">Entries</a>
         </nav>
     </header>
 
-<article class="JournalEntryList"></article>
+    <main class="dailyjournal">
 
-    <form action="">
+        <div class="container"></div>
 
-        <section class="main-items">
-            <fieldset>
-                <label for="myName">Abbey Royse</label>
-            </fieldset>
+        <form action="">
 
-            <fieldset>
+            <section class="main-items">
+                <fieldset>
+                    <label for="myName">Abbey Royse</label>
+                </fieldset>
 
-                <label for="journalDate">Entry Date</label>
-                <input type="date" name="journalDate" id="journalDate">
+                <fieldset>
 
-            </fieldset>
+                    <label for="journalDate">Entry Date</label>
+                    <input type="date" name="journalDate" id="journalDate">
 
-            <fieldset>
-                <label for="mood-select">Choose a mood:</label>
-                <select id="mood-select" name="moods">
-                    <option value="">How are you feeling?</option>
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="angry">Angry</option>
-                    <option value="lovely">Lovely</option>
-                    <option value="scared">Scared</option>
-                    <option value="stressed">STRESSED</option>
-                    <option value="decent">Decent</option>
-                    <option value="excited">Excited!!!</option>
-                    <option value="nervous">Nervous</option>
-                </select>
-            </fieldset>
+                </fieldset>
 
-            <div class="button">
-                <button>Record Journal Entry</button>
-            </div>
+                <fieldset>
+                    <label for="mood-select">Choose a mood:</label>
+                    <select id="mood-select" name="moods">
+                        <option value="">How are you feeling?</option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="angry">Angry</option>
+                        <option value="lovely">Lovely</option>
+                        <option value="scared">Scared</option>
+                        <option value="stressed">STRESSED</option>
+                        <option value="decent">Decent</option>
+                        <option value="excited">Excited!!!</option>
+                        <option value="nervous">Nervous</option>
+                    </select>
+                </fieldset>
 
-        </section>
+                <div class="button">
+                    <button>Record Journal Entry</button>
+                </div>
 
-        <fieldset class="textBox">
-            <label for="concepts-covered">Concepts Covered</label>
-            <textarea id="concepts" name="concepts-covered" rows="5" cols="50" class="concepttext"></textarea>
+            </section>
 
-            <label for="journal-entry">Journal Entry</label>
-            <textarea id="entries" name="journal-entry" rows="20" cols="100" class="journaltext"></textarea>
-        </fieldset>
+            <section>
+                <fieldset class="textBox">
+                    <label for="concepts-covered">Concepts Covered</label>
+                    <textarea id="concepts" name="concepts-covered" rows="5" cols="50" class="concepttext"></textarea>
 
-        <div class="button2">
-            <button>Edit</button>
-        </div>
+                    <label for="journal-entry">Journal Entry</label>
+                    <textarea id="entries" name="journal-entry" rows="20" cols="100" class="journaltext"></textarea>
+                </fieldset>
 
-        <div class="button3">
-            <button>Delete</button>
-        </div>
+                <div class="button2">
+                    <button>Edit</button>
+                </div>
 
-    </form>
+                <div class="button3">
+                    <button>Delete</button>
+                </div>
+            </section>
 
-    <section id="JournalEntryList"></section>
+        </form>
 
-    <main>
-        <p></p>
+        <section id="JournalEntryList"></section>
+
     </main>
 
     <footer>&copy; Abbey Royse 2021
