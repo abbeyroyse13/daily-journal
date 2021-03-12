@@ -1,13 +1,12 @@
-import { entries } from "./JournalEntry.js"
+import { entries } from "./Journal.js"
 
 export const JournalEntryList = (allEntries) => {
-    
-     let journalHTMLRep = "";
+    let journalHTMLRep = "";
 
      for (const journalObj of allEntries) {
 
          journalHTMLRep += entries(journalObj);
      };
-
     return journalHTMLRep;
+
 };
