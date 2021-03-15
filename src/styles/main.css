@@ -15,6 +15,11 @@ footer {
     margin-top: 50%;
 }
 
+img {
+    width: 30%;
+    height: 30%;
+}
+
 .navbar {
     justify-content: space-between;
     display: inline-block;
