@@ -1,6 +1,6 @@
 console.log("hello are you there");
 
-import { getJournalEntries, usejournalEntries, createNewEntry } from "./data/DataManager.js"
+import { getJournalEntries, usejournalEntries, createNewEntry, deletePost } from "./data/DataManager.js"
 import { JournalEntryList } from "./JournalEntryList.js"
 import { NavBar } from "./nav/NavBar.js"
 
@@ -20,33 +20,44 @@ applicationElement.addEventListener("click", event => {
     }
 })
 
-/*applicationElement.addEventListener("click", event => {
-    if (event.target.id === "Entries") {
-        //clear the input fields
+applicationElement.addEventListener("click", event => {
+        if (event.target.id === "Entries") {
+            //clear the input fields
+        }
+    })
+    // this probably needs more tweaking soon 
+applicationElement.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id === "newPost__submit") {
+        //collect the input values into an object to post to the DB
+        const title = document.querySelector("input[name='postTitle']").value
+        const url = document.querySelector("input[name='postURL']").value
+        const description = document.querySelector("textarea[name='postDescription']").value
+            //we have not created a user yet - for now, we will hard code `1`.
+            //we can add the current time as well
+        const postObject = {
+            title: title,
+            imageURL: url,
+            description: description,
+            userId: usejournalEntries().id,
+            timestamp: Date.now()
+        }
+
+        // be sure to import from the DataManager
+        createNewEntry(postObject);
     }
 })
 
 applicationElement.addEventListener("click", event => {
-  event.preventDefault();
-  if (event.target.id === "newPost__submit") {
-  //collect the input values into an object to post to the DB
-    const title = document.querySelector("input[name='postTitle']").value
-    const url = document.querySelector("input[name='postURL']").value
-    const description = document.querySelector("textarea[name='postDescription']").value
-    //we have not created a user yet - for now, we will hard code `1`.
-    //we can add the current time as well
-    const postObject = {
-        title: title,
-        imageURL: url,
-        description: description,
-        userId: 1,
-        timestamp: Date.now()
+    event.preventDefault();
+    if (event.target.id.startsWith("delete")) {
+        const entriesId = event.target.id.split("__")[1];
+        deletePost(entriesId)
+            .then(response => {
+                showPostList();
+            })
     }
-  
-  // be sure to import from the DataManager
-      createNewEntry(postObject)
-  }
-})*/
+})
 
 const showJournalEntryList = () => {
     const entryElement = document.querySelector("#JournalEntryList");

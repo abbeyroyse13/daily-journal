@@ -1,4 +1,4 @@
-let journalEntries = []; 
+let journalEntries = [];
 
 export const usejournalEntries = () => {
     return [...journalEntries];
@@ -6,26 +6,38 @@ export const usejournalEntries = () => {
 
 export const getJournalEntries = () => {
     return fetch("http://localhost:8088/entries")
-    .then(response => response.json())
-    .then(parsedResponse => {
+        .then(response => response.json())
+        .then(parsedResponse => {
 
-        const sortByDate = parsedResponse.sort(
-            (newEntry, nextEntry) => 
+            const sortByDate = parsedResponse.sort(
+                (newEntry, nextEntry) =>
                 Date.parse(nextEntry.date) - Date.parse(newEntry.date)
-        )
-        journalEntries = sortByDate;
-        return sortByDate;
-    })
+            )
+            journalEntries = sortByDate;
+            return sortByDate;
+        })
 };
+
+export const deletePost = entriesId => {
+    return fetch(`http://localhost:8088/posts/${entriesId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+
+        })
+        .then(response => response.json())
+        .then(getJournalEntries)
+}
 
 export const createNewEntry = (journalObj) => {
     return fetch("http://localhost:8088/entries", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(journalObj)
-  
-    })
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(journalObj)
+
+        })
         .then(response => response.json())
-  };
+};
